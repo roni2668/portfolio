@@ -1,6 +1,6 @@
 
 
-# Roni Mandal Portfoli0 : -
+# My Portfolio: -
 
 ## 🚀 Project overview
 
@@ -19,7 +19,7 @@ A modern, responsive Next.js portfolio featuring:
 ## 📍 Live Demo
 
 ```text
-https://portfolio-yourname.vercel.app
+https://portfolio-roni-2668s-projects.vercel.app/
 ```
 
 ---
@@ -169,9 +169,3 @@ npm run start
 | GitHub + Vercel | done |
 
 ---
-
-> Tip: For `README` artwork, add your own hero image file under public and update URL.
-
----
-
-You're fully complete: professional portfolio + deployment + readme.
