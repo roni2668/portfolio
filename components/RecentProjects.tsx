@@ -1,13 +1,14 @@
 "use client";
 
 import { FaLocationArrow } from "react-icons/fa6";
+import { FaGithub } from "react-icons/fa";
 
 import { projects } from "@/data";
 import { PinContainer } from "./ui/Pin";
 
 const RecentProjects = () => {
   return (
-    <div className="py-20">
+    <section id="projects" className="py-20 scroll-mt-24">
       <h1 className="heading">
         A small selection of{" "}
         <span className="text-purple">recent projects</span>
@@ -19,8 +20,8 @@ const RecentProjects = () => {
             key={item.id}
           >
             <PinContainer
-              title="/ui.aceternity.com"
-              href="https://twitter.com/mannupaaji"
+              title={item.title}
+              href={item.liveLink || item.github}
             >
               <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
                 <div
@@ -50,6 +51,25 @@ const RecentProjects = () => {
                 {item.des}
               </p>
 
+              {/* Tech Stack Section */}
+              {item.techStack && (
+                <div className="mt-4 mb-5">
+                  <p className="text-sm font-semibold text-purple mb-2">
+                    Tech Stack
+                  </p>
+                  <div className="space-y-1">
+                    {Object.entries(item.techStack).map(([category, techs]) => (
+                      <div key={category} className="text-xs">
+                        <span className="text-gray-400">{category}: </span>
+                        <span className="text-gray-300">
+                          {Array.isArray(techs) ? techs.join(", ") : techs}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
               <div className="flex items-center justify-between mt-7 mb-3">
                 <div className="flex items-center">
                   {item.iconLists.map((icon, index) => (
@@ -65,18 +85,37 @@ const RecentProjects = () => {
                   ))}
                 </div>
 
-                <div className="flex justify-center items-center">
-                  <p className="flex lg:text-xl md:text-xs text-sm text-purple">
-                    Check Live Site
-                  </p>
-                  <FaLocationArrow className="ms-3" color="#CBACF9" />
+                <div className="flex gap-3 items-center">
+                  {item.liveLink && item.liveLink !== "#" && (
+                    <a
+                      href={item.liveLink}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex justify-center items-center"
+                    >
+                      <p className="flex lg:text-xl md:text-xs text-sm text-purple">
+                        Live Site
+                      </p>
+                      <FaLocationArrow className="ms-2" color="#CBACF9" />
+                    </a>
+                  )}
+                  {item.github && (
+                    <a
+                      href={item.github}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex justify-center items-center"
+                    >
+                      <FaGithub className="text-xl text-purple" />
+                    </a>
+                  )}
                 </div>
               </div>
             </PinContainer>
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -1,4 +1,5 @@
 import { FaLocationArrow } from "react-icons/fa6";
+import { FaFileDownload } from "react-icons/fa";
 
 import MagicButton from "./MagicButton";
 import { Spotlight } from "./ui/Spotlight";
@@ -56,17 +57,66 @@ const Hero = () => {
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
           />
 
+          <div className="flex flex-col items-center gap-4 md:flex-row md:items-start md:justify-center md:gap-8 mb-6">
+            <div className="flex items-center gap-3 bg-white/10 p-3 rounded-2xl border border-white/10">
+              <img
+                src="/IMG20230820121850.jpg"
+                alt="Roni Mandal"
+                className="w-20 h-20 rounded-full object-cover border-2 border-purple-400"
+              />
+              <div className="text-left">
+                <p className="text-base md:text-lg font-bold">Roni Mandal</p>
+                <p className="text-xs md:text-sm text-slate-300">
+                  FullStack Developer
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-3 bg-white/10 p-3 rounded-2xl border border-white/10">
+              <img
+                src="/kiitlogo.png"
+                alt="KIIT University"
+                className="w-16 h-16 object-contain"
+              />
+              <div className="text-left">
+                <p className="text-sm font-medium">KIIT University</p>
+                <p className="text-xs md:text-sm text-slate-300">
+                  B.Tech, 2022-2026 | CGPA 8.67
+                </p>
+              </div>
+            </div>
+          </div>
+
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            Hi! I&apos;m Adrian, a Next.js Developer based in Croatia.
+            I&apos;m a dedicated FullStack Developer based in Kolkata, India.{" "}
+            <br />
+            Currently pursuing B.Tech at KIIT University (2022-2026) with a CGPA
+            of 8.67. Passionate about building impactful products and stays
+            active with soccer.
           </p>
 
-          <a href="#about">
-            <MagicButton
-              title="Show my work"
-              icon={<FaLocationArrow />}
-              position="right"
-            />
-          </a>
+          <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
+            <a href="#projects">
+              <MagicButton
+                title="Show my work"
+                icon={<FaLocationArrow />}
+                position="right"
+              />
+            </a>
+
+            <a
+              href="https://drive.google.com/file/d/1iLZ2pJAMe5PxwIhebqf3qkxpsIP5yjZR/view?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <MagicButton
+                title="View Resume"
+                icon={<FaFileDownload />}
+                position="right"
+                otherClasses="!bg-[#161A31] hover:!bg-[#1a1f3a]"
+              />
+            </a>
+          </div>
         </div>
       </div>
     </div>
