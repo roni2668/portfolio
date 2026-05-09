@@ -81,7 +81,7 @@ const Hero = () => {
               <div className="text-left">
                 <p className="text-sm font-medium">KIIT University</p>
                 <p className="text-xs md:text-sm text-slate-300">
-                  B.Tech, 2022-2026 | CGPA 8.67
+                  B.Tech, 2022-2026 | CGPA 8.70
                 </p>
               </div>
             </div>
@@ -91,7 +91,7 @@ const Hero = () => {
             I&apos;m a dedicated FullStack Developer based in Kolkata, India.{" "}
             <br />
             Currently pursuing B.Tech at KIIT University (2022-2026) with a CGPA
-            of 8.67. Passionate about building impactful products and stays
+            of 8.70. Passionate about building impactful products and stays
             active with soccer.
           </p>
 
@@ -105,7 +105,7 @@ const Hero = () => {
             </a>
 
             <a
-              href="https://drive.google.com/file/d/1iLZ2pJAMe5PxwIhebqf3qkxpsIP5yjZR/view?usp=drive_link"
+              href="https://drive.google.com/file/d/1KGGAVo5Hq7ecxbg8ZxeHKmYbjiS-MNKP/view?usp=drivesdk"
               target="_blank"
               rel="noopener noreferrer"
             >
